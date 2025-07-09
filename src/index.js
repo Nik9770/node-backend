@@ -1,10 +1,9 @@
-import express from "express";
 import connectDB from "./db/index.js";
 import dotenv from "dotenv";
-
+import { app } from "./app.js";
 //dot env config
 dotenv.config({
-  path: "./env",
+  path: "./.env",
 });
 
 //connecting data base
@@ -17,5 +16,3 @@ connectDB()
   .catch((err) => {
     console.log("MogodB index connection failed !!!", err);
   });
-
-const app = express();
